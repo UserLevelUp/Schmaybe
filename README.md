@@ -2,6 +2,10 @@
 
 Judiciously used ChatGPT and Gemini to help create log monitoring app called Schmaybe.  It grabs the line number and any new line, and when it detects a change to the log file, it monitors it.  Along with the name of the file and the actual line.
 
+If you are on vacation, on a sabbatical, or even visiting friends or family, you don't really know if that log file is really doing anything other than just sitting there.  That's why Schmaybe was created, so you will know.  The test server allows clients to connect via web sockets and it sends json message each time it detects a line was added to the log file.  
+
+Currently in alpha release.
+
 # python - server info
 
 Please go to the readme.md file in the proto-api folder.  The server uses websockets port 8765 and sends messages to any client that is listening.   A simple test client can be called as well to test the server is sending messages for a log file that it is --monitoring.
