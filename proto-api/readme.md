@@ -47,7 +47,7 @@ python -m venv env
 .\env\Scripts\Activate.ps1
 
 ## Start the test.py program which is the Web Hook Server
-...\proto-api> .\test.py
+...\proto-api> .\test.py --monitor
 
 ## Start the client.py which is the client.py
 ...\proto-api> .\client.py
