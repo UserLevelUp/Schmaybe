@@ -43,6 +43,13 @@ from the .\proto-api folder
 ## Create a virtual environment
 python -m venv env
 
+### May need to use pip to install missing libraries
+
+pip install websockets
+pip install watchdog
+
+#### Next two commands should help determine if there are missing imported libraries that need to be pipped in
+
 ## Activate the python test environment for working on prototype
 .\env\Scripts\Activate.ps1
 
