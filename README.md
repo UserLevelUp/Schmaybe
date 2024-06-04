@@ -12,7 +12,7 @@ The Angular Web site is a client that uses websockets to listen to the server th
 
 # NgUserLevelUp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.   Has been consistently updated since.
 
 ## Development server
 
