@@ -1,0 +1,38 @@
+
+.background {
+  fill: #03cc83;
+}
+
+
+@keyframes move-around {
+  0% {
+    transform: translate(-40%, -35%);
+  }
+
+  25% {
+    transform: translate(40%, -35%);
+  }
+
+  50% {
+    transform: translate(40%, 35%);
+  }
+
+  75% {
+    transform: translate(-40%, 35%);
+  }
+
+  100% {
+    transform: translate(-40%, -35%);
+  }
+}
+
+svg {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.cross {
+  animation: move-around 0.99s;
+  stroke: #262d3d;
+  stroke-width: 10px;
+}
