@@ -45,8 +45,8 @@ python -m venv env
 
 ### May need to use pip to install missing libraries
 
-pip install websockets
-pip install watchdog
+pip install websockets<br />
+pip install watchdog<be />
 
 #### Next two commands should help determine if there are missing imported libraries that need to be pipped in
 
