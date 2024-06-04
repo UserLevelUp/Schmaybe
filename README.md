@@ -1,6 +1,6 @@
 # Schmaybe - Log file monitoring utility
 
-Judiciously used ChatGPT and Gemini to help create log monitoring app called Schmaybe.  It grabs the line number and any new line when it detects a change to the log file its monitoring.  Along with the name of the file and the actual line.
+Judiciously used ChatGPT and Gemini to help create log monitoring app called Schmaybe.  It grabs the line number and any new line, and when it detects a change to the log file, it monitors it.  Along with the name of the file and the actual line.
 
 # python - server info
 
