@@ -66,6 +66,6 @@ pip install watchdog<be />
 ## Open log.txt and add "new log entry"
 echo "new log entry" >> .\proto-api\log.txt
 
-## more complex log entry example
+## more complex log entry example using powershell
 "$date [$guid] Some text log entry" | Out-File -FilePath "C:\src\ulu\ngUserLevelUp\proto-api\log.txt" -Append -Encoding UTF8
 
