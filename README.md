@@ -1,8 +1,5 @@
 # Schmaybe - Log file monitoring utility
-
-Judiciously used ChatGPT and Gemini to help create a log monitoring app called Schmaybe.  It grabs the line number and any new line, and when it detects a change to the log file, it sends the last line as JSON using WebSockets,  along with the name of the file and the actual line number.
-
-If you are on vacation, on a sabbatical, or even visiting friends or family, you don't know if that log file is doing anything other than just sitting there.  That's why Schmaybe was created, so you will know.  The test server allows clients to connect via web sockets, and it sends a JSON message each time it detects a line was added to the log file.  
+I used ChatGPT and Gemini thoughtfully to develop a log monitoring app called Schmaybe. The app captures the line number and any new line in a log file. When it detects a change in the log file, it transmits the last line as JSON through WebSockets to any clients listening. It also includes the name of the file and the line number.  
 
 Currently in alpha release.
 
