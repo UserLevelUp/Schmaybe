@@ -59,7 +59,9 @@ pip install watchdog<be />
 ## Start the client.py which is the client.py
 ...\proto-api> .\client.py
 
-## Run the angular app
+## Run the angular app use "npm install" to install everything
+### Also may need to install a version of npm or use npx to install specific version on npm
+### Also may need to go to angular.io and install angular cli first locally
 ...\ngUserLevelUp> ng serve
 
 # Modify the log and hit the save button
