@@ -43,11 +43,18 @@ from the .\proto-api folder
 ## Create a virtual environment
 python -m venv env
 
-## Activate the python test environment for working on prototype
+### May need to use pip to install missing libraries
+
+pip install websockets<br />
+pip install watchdog<be />
+
+#### Next two commands should help determine if there are missing imported libraries that need to be pipped in
+
+## Activate the python test environment for working on a prototype
 .\env\Scripts\Activate.ps1
 
-## Start the test.py program which is the Web Hook Server
-...\proto-api> .\test.py
+## Start the test.py program, which is the WebHook Server defaults to the current folder and log.txt file.
+...\proto-api> .\test.py --monitor
 
 ## Start the client.py which is the client.py
 ...\proto-api> .\client.py
