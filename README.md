@@ -5,7 +5,7 @@ Currently in alpha release.
 
 # python - server info
 
-Please go to the readme.Md file in the proto-API folder.  The server uses WebSockets port 8765 and sends messages to any listening client.   A simple test client can also be called to test the server is sending messages for a log file that it is --monitoring.
+Please make sure to refer to the readme.MD file in the proto-API folder. The server utilizes WebSockets on port 8765 to send messages to any listening client. You can also use a simple test client to ensure that the server is sending messages for a log file it is monitoring.
 
 # Angular
 
