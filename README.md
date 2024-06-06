@@ -9,9 +9,11 @@ A business scenario for using this log monitoring tool: A CEO comes to a product
 
 # python - server info
 
-Please make sure to refer to the readme.MD file in the proto-API folder. The server utilizes WebSockets on port 8765 to send messages to any listening client. You can also use a simple test client to ensure that the server is sending messages for a log file it is monitoring.
+Please make sure to refer to the readme.MD file in the proto-API folder. The server utilizes WebSockets on port 8765 to send messages to any listening client. You can also use a simple test client to ensure that the server sends messages for a log file it monitors.
 
-# Angular
+# Angular (Remove)
+
+Boring angular stuff on how to set up and possibly use angular. 
 
 The Angular Web site is a client that uses web sockets to listen to the server monitoring on a specific port 8765, which is currently hard coded.
 
