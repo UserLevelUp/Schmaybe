@@ -7,20 +7,23 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SubjectListComponent } from './subject-list/subject-list.component';
 import { FormsModule } from '@angular/forms';
+import { LogCardComponent } from './log-card.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     SvgComponent,
-    SubjectListComponent
+    SubjectListComponent,
+    LogCardComponent
   ],
   imports: [
     BrowserModule, 
     BrowserAnimationsModule,    
-    NoopAnimationsModule,
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatCardModule
     
   ],
   providers: [],

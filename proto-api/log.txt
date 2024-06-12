@@ -34,3 +34,8 @@ testing023
 2024-06-02 17:55:02 [6fc1fe64-91f5-43e7-a4df-8eb4f5ac2c3c] Some text log entry
 2024-06-02 17:55:02 [6fc1fe64-91f5-43e7-a4df-8eb4f5ac2c3c] Some text log entry
  [] Some text log entry
+log entry 69
+log entry 70
+log entry 71
+log entry 72    
+log entry 73

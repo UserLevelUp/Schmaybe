@@ -2,4 +2,8 @@
 
 <button (click)="openSnackBar('Hello, this is a notification!', 'Dismiss')">Show Snackbar</button>
 
-
+<app-log-card 
+*ngFor="let logEntry of logEntries" 
+[message]="logEntry.message">
+<p>{{logEntry.timestamp}}</p>
+</app-log-card>
