@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngUserLevelUp:build:production"
+              "buildTarget": "ngUserLevelUp:build:production"
             },
             "development": {
-              "browserTarget": "ngUserLevelUp:build:development"
+              "buildTarget": "ngUserLevelUp:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngUserLevelUp:build"
+            "buildTarget": "ngUserLevelUp:build"
           }
         },
         "test": {
