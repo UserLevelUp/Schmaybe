@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
         <!-- <div *ngFor="let word of message.split(' '); let i = index">
           <span [ngClass]="{ 'dynamic': labels[i] === 'dynamic' }">{{ word }}</span> 
         </div> -->
-        <div>{{message}}</div>
+        <div class="dynamic">{{message}}</div>
       </mat-card-content>
     </mat-card>
   `,

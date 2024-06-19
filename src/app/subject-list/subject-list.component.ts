@@ -8,9 +8,9 @@ import { SubjectModel } from '../models/subject-model.model';
 })
 export class SubjectListComponent {
   subjects: SubjectModel[] = [
-    new SubjectModel('Subject 1'),
+    new SubjectModel('Subject 1', true),
     new SubjectModel('Subject 2', true),
-    new SubjectModel('Subject 3')
+    new SubjectModel('Subject 3', true)
   ];
 
   toggleSubject(subject: SubjectModel): void {

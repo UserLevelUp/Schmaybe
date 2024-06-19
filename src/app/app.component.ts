@@ -35,7 +35,8 @@ export class AppComponent implements OnInit {
       next: (message: any) => {
         console.log(typeof message, message); // This will log the type and content of the message
         const data = (typeof message === 'string') ? JSON.parse(message) : message;
-        this.snackBar.open(`File ${data.file_path} line-number: ${data.line_number} updated: ${data.last_line}`, 'Dismiss', {
+        message = `File: ${data.file_path} line-number: ${data.line_number} updated: ${data.last_line}`;
+        this.snackBar.open(`File: ${data.file_path} line-number: ${data.line_number} updated: ${data.last_line}`, 'Dismiss', {
           verticalPosition: 'top',
         });
         const { text, labels } = this.messageAnalyzer.analyzeMessage(message);
