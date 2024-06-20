@@ -4,7 +4,7 @@
 
 <app-log-card 
 *ngFor="let logEntry of logEntries" 
-[message]="logEntry.message">
+[message]="logEntry.last_line">
 <p>{{logEntry.timestamp}}</p>
 </app-log-card>
 

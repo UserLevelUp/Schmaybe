@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { WebSocketService } from './services/web-socket-service.service';
 import { LogMessageAnalyzerService } from './services/log-message-analyzer.service';
+import { Observable } from 'rxjs';
+import { LogEntry } from './models/log-entry';
 
-interface LogEntry {
-  message: string;
-  timestamp?: string; // Optional if you have timestamps
-}
+// interface LogEntry {
+//   message: string;
+//   timestamp?: string; // Optional if you have timestamps
+// }
 
 @Component({
   selector: 'app-root',
@@ -32,15 +34,16 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.wsService.connect('ws://localhost:8765');
     this.wsService.messages$.subscribe({
-      next: (message: any) => {
-        console.log(typeof message, message); // This will log the type and content of the message
-        const data = (typeof message === 'string') ? JSON.parse(message) : message;
-        message = `File: ${data.file_path} line-number: ${data.line_number} updated: ${data.last_line}`;
+      next: (data: LogEntry) => {
+       // const data = message as LogEntry;
+        console.log(`logentry data: ${JSON.stringify(data)})}`);
+        //console.log("Raw message received:", message);
+        //console.log(typeof message, message); // This will log the type and content of the message
         this.snackBar.open(`File: ${data.file_path} line-number: ${data.line_number} updated: ${data.last_line}`, 'Dismiss', {
           verticalPosition: 'top',
         });
-        const { text, labels } = this.messageAnalyzer.analyzeMessage(message);
-        this.logEntries.push({ message: text, timestamp: new Date().toISOString()});        
+        //const { text, labels } = this.messageAnalyzer.analyzeMessage(message);
+        this.logEntries.push(data);        
       },
       error: (error) => console.error('WebSocket error:', error),
       complete: () => console.log('WebSocket connection closed'),

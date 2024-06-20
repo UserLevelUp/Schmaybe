@@ -5,9 +5,6 @@ import { Component, Input } from '@angular/core';
   template: `
     <mat-card>
       <mat-card-content>
-        <!-- <div *ngFor="let word of message.split(' '); let i = index">
-          <span [ngClass]="{ 'dynamic': labels[i] === 'dynamic' }">{{ word }}</span> 
-        </div> -->
         <div class="dynamic">{{message}}</div>
       </mat-card-content>
     </mat-card>
