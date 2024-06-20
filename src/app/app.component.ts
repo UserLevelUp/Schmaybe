@@ -37,8 +37,6 @@ export class AppComponent implements OnInit {
       next: (data: LogEntry) => {
        // const data = message as LogEntry;
         console.log(`logentry data: ${JSON.stringify(data)})}`);
-        //console.log("Raw message received:", message);
-        //console.log(typeof message, message); // This will log the type and content of the message
         this.snackBar.open(`File: ${data.file_path} line-number: ${data.line_number} updated: ${data.last_line}`, 'Dismiss', {
           verticalPosition: 'top',
         });

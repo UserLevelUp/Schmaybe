@@ -7,6 +7,21 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import json
 
+class LogEntry:
+    def __init__(self, file_path, last_line, line_number, timestamp):
+        self.file_path = file_path
+        self.last_line = last_line
+        self.line_number = line_number
+        self.timestamp = timestamp
+
+    def to_json(self):
+        return {
+            "file_path": self.file_path,
+            "last_line": self.last_line,
+            "line_number": self.line_number,
+            "timestamp": self.timestamp
+        }
+
 class FileChangeHandler(FileSystemEventHandler):
     def __init__(self, notify_function, file_path, loop):
         super().__init__()
@@ -36,13 +51,10 @@ class FileChangeHandler(FileSystemEventHandler):
         if event.src_path == self.file_path and (current_time - self.last_sent > self.debounce_seconds):
             last_line, line_number = self.read_last_line()
             if last_line not in ["File is currently empty.", "File not found."]:
-                # Ensure the JSON object matches the client's expectation
-                message = json.dumps({
-                    "file_path": self.file_path,   # Include the file path
-                    "last_line": last_line,        # Include the last line read
-                    "line_number": line_number,    # Include the line number
-                    "timestamp": current_time      # Include the timestamp
-                })
+                # Create a LogEntry instance
+                log_entry = LogEntry(self.file_path, last_line, line_number, current_time)                
+                # Convert the LogEntry instance to a JSON string
+                message = json.dumps(log_entry.to_json())
                 self.last_sent = current_time
                 asyncio.run_coroutine_threadsafe(
                     self.notify_function(message),
