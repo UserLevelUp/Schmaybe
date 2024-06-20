@@ -14,13 +14,13 @@ class LogEntry:
         self.line_number = line_number
         self.timestamp = timestamp
 
-    def to_json(self):
-        return {
-            "file_path": self.file_path,
-            "last_line": self.last_line,
-            "line_number": self.line_number,
-            "timestamp": self.timestamp
-        }
+    # def to_json(self):
+    #     return {
+    #         "file_path": self.file_path,
+    #         "last_line": self.last_line,
+    #         "line_number": self.line_number,
+    #         "timestamp": self.timestamp
+    #     }
 
 class FileChangeHandler(FileSystemEventHandler):
     def __init__(self, notify_function, file_path, loop):
@@ -54,7 +54,7 @@ class FileChangeHandler(FileSystemEventHandler):
                 # Create a LogEntry instance
                 log_entry = LogEntry(self.file_path, last_line, line_number, current_time)                
                 # Convert the LogEntry instance to a JSON string
-                message = json.dumps(log_entry.to_json())
+                message = json.dumps(log_entry.__dict__)
                 self.last_sent = current_time
                 asyncio.run_coroutine_threadsafe(
                     self.notify_function(message),

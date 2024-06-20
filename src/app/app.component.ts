@@ -5,11 +5,6 @@ import { LogMessageAnalyzerService } from './services/log-message-analyzer.servi
 import { Observable } from 'rxjs';
 import { LogEntry } from './models/log-entry';
 
-// interface LogEntry {
-//   message: string;
-//   timestamp?: string; // Optional if you have timestamps
-// }
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -40,7 +35,15 @@ export class AppComponent implements OnInit {
         this.snackBar.open(`File: ${data.file_path} line-number: ${data.line_number} updated: ${data.last_line}`, 'Dismiss', {
           verticalPosition: 'top',
         });
+
+        // TODO: check the last Message with data.last_line and determine if it is a new message 70% match
+
+        // TODO: if it is a new message then add it to the logEntries
+
+        // TODO: if the message is not a new message then update the count
+
         //const { text, labels } = this.messageAnalyzer.analyzeMessage(message);
+
         this.logEntries.push(data);        
       },
       error: (error) => console.error('WebSocket error:', error),
