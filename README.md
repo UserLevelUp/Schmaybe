@@ -1,5 +1,5 @@
 # Schmaybe - Log file monitoring utility
-I thoughtfully used ChatGPT and Gemini to develop a log monitoring app called Schmaybe. The app captures the line number and any new line in a log file. When it detects a change in the log file, it transmits the last line as JSON through WebSockets to any clients listening. It also includes the name of the file and the line number.  
+I thoughtfully used ChatGPT and Gemini to develop a log monitoring app called Schmaybe. The app captures the line number and any new line in a log file. When it detects a change in the log file, it transmits the last line as JSON through WebSockets to any clients listening. It also includes the name of the file and the line number.  Also the name Schmaybe has been around for a long time but has also been used in sci fi books by Craig Alanson who wrote several series including the Expeditionary Force and has an interesting character named Skippy who always seems to badger his friend and arch nemesis Joe Bishop.  When Skippy responds to Joe when Joe urgently needs some ask to save humanity and if Skippy can help, Skippy responds simply by sometimes saying, "Schmaybe!"
 
 [Watch the demo video on YouTube](https://www.youtube.com/watch?v=3JaMzK0okIM)
 
